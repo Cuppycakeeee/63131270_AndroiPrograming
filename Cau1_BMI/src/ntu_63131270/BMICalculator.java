@@ -9,12 +9,13 @@ public class BMICalculator extends JFrame implements ActionListener {
     private JTextField weightField, heightField, ageField;
     private JRadioButton maleRadio, femaleRadio;
     private JButton calculateButton;
-   
+
     public BMICalculator() {
         setTitle("BMI Calculator");
         setSize(400, 300);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(6, 2));
 
@@ -34,6 +35,7 @@ public class BMICalculator extends JFrame implements ActionListener {
 
         calculateButton = new JButton("Calculate");
         calculateButton.addActionListener(this);
+
         panel.add(weightLabel);
         panel.add(weightField);
         panel.add(heightLabel);
@@ -49,12 +51,14 @@ public class BMICalculator extends JFrame implements ActionListener {
 
         add(panel);
     }
+
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == calculateButton) {
             double weight = Double.parseDouble(weightField.getText());
             double height = Double.parseDouble(heightField.getText()) / 100; // convert cm to m
             int age = Integer.parseInt(ageField.getText());
             double bmi = weight / (height * height);
+
             String status;
             if (bmi < 18.5)
                 status = "Underweight";
@@ -64,8 +68,19 @@ public class BMICalculator extends JFrame implements ActionListener {
                 status = "Overweight";
             else
                 status = "Obesity";
+
             String gender = maleRadio.isSelected() ? "Male" : "Female";
 
             resultLabel.setText(String.format("BMI: %.2f - Status: %s - Gender: %s - Age: %d", bmi, status, gender, age));
         }
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                new BMICalculator().setVisible(true);
+            }
+        });
+    }
 }
+
