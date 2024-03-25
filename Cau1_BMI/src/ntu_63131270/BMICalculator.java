@@ -34,5 +34,19 @@ public class BMICalculator extends JFrame implements ActionListener {
 
         calculateButton = new JButton("Calculate");
         calculateButton.addActionListener(this);
+        panel.add(weightLabel);
+        panel.add(weightField);
+        panel.add(heightLabel);
+        panel.add(heightField);
+        panel.add(ageLabel);
+        panel.add(ageField);
+        panel.add(genderLabel);
+        panel.add(maleRadio);
+        panel.add(new JLabel());
+        panel.add(femaleRadio);
+        panel.add(calculateButton);
+        panel.add(resultLabel);
+
+        add(panel);
     }
 }
