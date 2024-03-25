@@ -15,5 +15,16 @@ public class BMICalculator extends JFrame implements ActionListener {
         setSize(400, 300);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(6, 2));
+
+        weightLabel = new JLabel("Weight (kg):");
+        weightField = new JTextField();
+        heightLabel = new JLabel("Height (cm):");
+        heightField = new JTextField();
+        ageLabel = new JLabel("Age:");
+        ageField = new JTextField();
+        genderLabel = new JLabel("Gender:");
+        maleRadio = new JRadioButton("Male");
     }
 }
