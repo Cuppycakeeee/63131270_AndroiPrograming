@@ -64,5 +64,8 @@ public class BMICalculator extends JFrame implements ActionListener {
                 status = "Overweight";
             else
                 status = "Obesity";
+            String gender = maleRadio.isSelected() ? "Male" : "Female";
+
+            resultLabel.setText(String.format("BMI: %.2f - Status: %s - Gender: %s - Age: %d", bmi, status, gender, age));
         }
 }
