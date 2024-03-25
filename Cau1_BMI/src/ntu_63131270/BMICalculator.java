@@ -26,5 +26,13 @@ public class BMICalculator extends JFrame implements ActionListener {
         ageField = new JTextField();
         genderLabel = new JLabel("Gender:");
         maleRadio = new JRadioButton("Male");
+        femaleRadio = new JRadioButton("Female");
+        ButtonGroup genderGroup = new ButtonGroup();
+        genderGroup.add(maleRadio);
+        genderGroup.add(femaleRadio);
+        resultLabel = new JLabel("");
+
+        calculateButton = new JButton("Calculate");
+        calculateButton.addActionListener(this);
     }
 }
