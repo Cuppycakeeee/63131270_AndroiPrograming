@@ -9,5 +9,11 @@ public class BMICalculator extends JFrame implements ActionListener {
     private JTextField weightField, heightField, ageField;
     private JRadioButton maleRadio, femaleRadio;
     private JButton calculateButton;
-
+   
+    public BMICalculator() {
+        setTitle("BMI Calculator");
+        setSize(400, 300);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+    }
 }
