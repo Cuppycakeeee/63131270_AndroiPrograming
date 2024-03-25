@@ -55,5 +55,14 @@ public class BMICalculator extends JFrame implements ActionListener {
             double height = Double.parseDouble(heightField.getText()) / 100; // convert cm to m
             int age = Integer.parseInt(ageField.getText());
             double bmi = weight / (height * height);
+            String status;
+            if (bmi < 18.5)
+                status = "Underweight";
+            else if (bmi < 24.9)
+                status = "Normal weight";
+            else if (bmi < 29.9)
+                status = "Overweight";
+            else
+                status = "Obesity";
         }
 }
