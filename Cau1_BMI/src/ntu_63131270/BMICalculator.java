@@ -49,4 +49,11 @@ public class BMICalculator extends JFrame implements ActionListener {
 
         add(panel);
     }
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == calculateButton) {
+            double weight = Double.parseDouble(weightField.getText());
+            double height = Double.parseDouble(heightField.getText()) / 100; // convert cm to m
+            int age = Integer.parseInt(ageField.getText());
+            double bmi = weight / (height * height);
+        }
 }
