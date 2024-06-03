@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nenchuyentiep"
+    android:padding="16dp">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        tools:srcCompat="@mipmap/profile_image" />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_centerHorizontal="true"
+        android:text="Vo Tan Thanh"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/mota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewName"
+        android:layout_centerHorizontal="true"
+        android:text="Mô Tả Bản Thân:"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mota"
+        android:layout_centerHorizontal="true"
+        android:text="Sinh Viên K63 - Đại Học Nha Trang - Khoa Công Nghệ Thông Tin"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/mssv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewDescription"
+        android:layout_centerHorizontal="true"
+        android:text="MSSV: 63131270"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/lophocphan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mssv"
+        android:layout_centerHorizontal="true"
+        android:text="Lớp: 63.CNTT-2"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/monhoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lophocphan"
+        android:layout_centerHorizontal="true"
+        android:text="Lập Trình Android"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>
